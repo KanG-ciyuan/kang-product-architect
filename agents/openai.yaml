@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kang Product Architect"
+  short_description: "审查产品入口、角色权限和任务边界"
+  default_prompt: "使用 $kang-product-architect 审查当前产品架构，并输出带证据状态的交接文档。"
