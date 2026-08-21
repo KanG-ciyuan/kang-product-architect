@@ -3,7 +3,7 @@ name: kang-product-architect
 description: Review and define the product architecture of the enterprise AI process diagnosis platform before implementation. Use when deciding product entry, roles, permissions, core tasks, page boundaries, and completion criteria. Do not use for coding or visual styling.
 metadata:
   author: Kang
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Kang Product Architecture Agent
