@@ -1,0 +1,85 @@
+{
+  "schema_version": "2.0.0-kang-lite",
+  "generated_at": "2026-08-22",
+  "package": {
+    "name": "kang-product-architect",
+    "version": "0.2.0",
+    "owner": "Kang",
+    "maturity_tier": "production",
+    "lifecycle_stage": null,
+    "maintenance": {}
+  },
+  "intent": {
+    "description": "Define or review product architecture for SaaS, internal tools, workflow products, and digital services. Use when deciding entry points, actors, permissions, core jobs, information architecture, state ownership, handoffs, or observable completion criteria. Do not use for visual styling, implementation, or isolated workflow or UX defects whose product structure is already approved.",
+    "job_to_be_done": "Define or review product architecture for SaaS, internal tools, workflow products, and digital services. Use when deciding entry points, actors, permissions, core jobs, information architecture, state ownership, handoffs, or observable completion criteria. Do not use for visual styling, implementation, or isolated workflow or UX defects whose product structure is already approved.",
+    "target_users": [
+      "Kang operator"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "kang_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "重构 CRM 从线索到回款的产品入口、销售主管财务权限和模块边界",
+      "定义采购审批工具中申请人、主管、财务和法务的产品架构、页面与数据权限",
+      "规划游戏运营后台活动配置、审核、发布岗位的产品架构",
+      "为内容平台定义作者、编辑、法务的产品架构、角色权限、工作区和完成状态",
+      "审查内部工单系统的角色、入口、状态归属和管理后台边界"
+    ],
+    "should_not_trigger": [
+      "把编辑器工具栏按钮换成图标并调整间距",
+      "修复客户列表 API 返回 500",
+      "把这段产品介绍翻译成英文"
+    ],
+    "near_neighbor": [
+      "分析采购驳回后补充材料为什么没有交接",
+      "员工第一次进入工单台不知道先点哪里",
+      "版本完成后按真实用户路径判断是否可以发布"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [
+      "references/architecture-rubric.md"
+    ],
+    "scripts": [],
+    "evals": [
+      "evals/output_cases.json",
+      "evals/trigger_cases.json"
+    ],
+    "reports": [
+      "reports/creation-handoff.md",
+      "reports/prior-art-research.md",
+      "reports/skill-ir.json",
+      "reports/trigger-eval.json"
+    ]
+  },
+  "portability": {
+    "canonical_format": null,
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible"
+    ],
+    "activation": {},
+    "execution": {},
+    "trust": {},
+    "permissions": {},
+    "degradation": {}
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}
