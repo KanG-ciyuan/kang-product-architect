@@ -1,0 +1,154 @@
+{
+  "ok": true,
+  "threshold": 0.3,
+  "description_concepts": [
+    "actors",
+    "architecture",
+    "completion",
+    "permissions"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "重构 CRM 从线索到回款的产品入口、销售主管财务权限和模块边界",
+        "family": "crm",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "architecture",
+          "permissions"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "定义采购审批工具中申请人、主管、财务和法务的产品架构、页面与数据权限",
+        "family": "approval",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "architecture",
+          "permissions"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "规划游戏运营后台活动配置、审核、发布岗位的产品架构",
+        "family": "game-ops",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "actors",
+          "architecture"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "为内容平台定义作者、编辑、法务的产品架构、角色权限、工作区和完成状态",
+        "family": "content",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "actors",
+          "architecture",
+          "permissions"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "审查内部工单系统的角色、入口、状态归属和管理后台边界",
+        "family": "internal-tool",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "actors",
+          "architecture",
+          "completion"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "把编辑器工具栏按钮换成图标并调整间距",
+        "family": "visual-implementation",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "修复客户列表 API 返回 500",
+        "family": "debugging",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "把这段产品介绍翻译成英文",
+        "family": "translation",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": "翻译"
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "分析采购驳回后补充材料为什么没有交接",
+        "family": "process-reviewer",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "员工第一次进入工单台不知道先点哪里",
+        "family": "ux-auditor",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "版本完成后按真实用户路径判断是否可以发布",
+        "family": "acceptance-auditor",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      }
+    ]
+  }
+}

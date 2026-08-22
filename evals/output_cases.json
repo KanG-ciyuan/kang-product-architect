@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "crm-architecture-contract",
+      "prompt": "使用 $kang-product-architect 审查 CRM 的销售、主管、财务和管理员架构。",
+      "input_files": [],
+      "assertions": [
+        "Only actors supplied by the case appear as confirmed actors",
+        "Output covers entry, permissions, state ownership, handoffs, completion, and open decisions",
+        "Every finding includes evidence, impact, owner, and verification",
+        "No enterprise-diagnosis-specific actor or workflow is injected"
+      ],
+      "human_notes": "Check whether the proposed structure is simpler than the current one and remains executable."
+    }
+  ]
+}

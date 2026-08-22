@@ -1,1 +1,28 @@
-{"recommended_threshold":0.3,"description_required_concepts":["architecture","roles","product"],"positive_concepts":{"architecture":["architecture","架构","entry","入口"],"roles":["roles","角色","permissions","权限"],"product":["product","产品","SaaS"]},"negative_patterns":["写代码","改颜色","翻译"],"should_trigger":[{"text":"审查 SaaS 产品的入口、角色权限和页面边界","family":"architecture"}],"should_not_trigger":[{"text":"只修改按钮颜色","family":"frontend"}],"near_neighbor":[{"text":"分析员工证据冲突，不讨论产品架构","family":"process"}]}
+{
+  "recommended_threshold": 0.3,
+  "description_required_concepts": ["architecture", "actors", "permissions"],
+  "positive_concepts": {
+    "architecture": ["architecture", "架构", "entry", "入口", "模块边界"],
+    "actors": ["actors", "roles", "角色", "岗位"],
+    "permissions": ["permissions", "权限", "数据可见"],
+    "completion": ["completion", "完成标准", "状态归属"]
+  },
+  "negative_patterns": ["只改颜色", "翻译", "修复接口", "单个按钮"],
+  "should_trigger": [
+    {"text": "重构 CRM 从线索到回款的产品入口、销售主管财务权限和模块边界", "family": "crm"},
+    {"text": "定义采购审批工具中申请人、主管、财务和法务的产品架构、页面与数据权限", "family": "approval"},
+    {"text": "规划游戏运营后台活动配置、审核、发布岗位的产品架构", "family": "game-ops"},
+    {"text": "为内容平台定义作者、编辑、法务的产品架构、角色权限、工作区和完成状态", "family": "content"},
+    {"text": "审查内部工单系统的角色、入口、状态归属和管理后台边界", "family": "internal-tool"}
+  ],
+  "should_not_trigger": [
+    {"text": "把编辑器工具栏按钮换成图标并调整间距", "family": "visual-implementation"},
+    {"text": "修复客户列表 API 返回 500", "family": "debugging"},
+    {"text": "把这段产品介绍翻译成英文", "family": "translation"}
+  ],
+  "near_neighbor": [
+    {"text": "分析采购驳回后补充材料为什么没有交接", "family": "process-reviewer"},
+    {"text": "员工第一次进入工单台不知道先点哪里", "family": "ux-auditor"},
+    {"text": "版本完成后按真实用户路径判断是否可以发布", "family": "acceptance-auditor"}
+  ]
+}
